@@ -1,0 +1,22 @@
+{
+  "name": "morph-strings",
+  "version": "0.1.0",
+  "description": "generate permutations of words through character substitution",
+  "main": "index.js",
+  "scripts": {
+    "test": "morph testing..."
+  },
+  "bin": {
+    "morph": "./bin/morph"
+  },
+  "author": "Kyle Oliveiro <hello@kyle.sg> (http://kyle.sg)",
+  "license": "ISC",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/kyleoliveiro/morph.git"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "lodash": "^4.0.1"
+  }
+}

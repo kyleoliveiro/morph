@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+
+var _ = require('lodash');
+var program = require('commander');
+var morph = require('../index.js');
+
+program
+	.version('0.1.0')
+	.usage('<word(s)> [options]')
+	.option('-c, --count', 'print number of possible permutations')
+	.option('-p, --permute', 'print all results')
+	.parse(process.argv);
+
+	var options = process.argv.slice(2);
+	var availableFlags = [];
+	var words;
+
+	program.options.forEach(function(option) {
+		var optionFlags = option.flags.split(', ');
+		availableFlags.push(optionFlags);
+	});
+
+	availableFlags = _.flattenDeep(availableFlags);
+	words = _.difference(options, availableFlags);
+
+	if(program.count) {
+		console.log(morph(words, 'count'));
+		return false;
+	}
+
+	if(program.permute) {
+		console.log(morph(words, 'permute'));
+	} else {
+		if(!program.count) {
+			console.log(morph(words));
+		}
+	}
+
+	if(options.length <= 0) {
+		program.help();
+	}
