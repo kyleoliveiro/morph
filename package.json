@@ -4,7 +4,7 @@
   "description": "generate permutations of words through character substitution",
   "main": "index.js",
   "scripts": {
-    "test": "morph testing..."
+    "test": "./bin/morph testing morph..."
   },
   "bin": {
     "morph": "./bin/morph"
