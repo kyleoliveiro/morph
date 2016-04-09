@@ -1,5 +1,8 @@
 # morph
 
+[![Build Status](https://travis-ci.org/kyleoliveiro/morph.svg?branch=master)](https://travis-ci.org/kyleoliveiro/morph)
+[![npm](https://img.shields.io/npm/v/morph-strings.svg)](https://www.npmjs.com/package/morph-strings)
+
 Generate permutations of words through character substitution.
 
 ## Installation
