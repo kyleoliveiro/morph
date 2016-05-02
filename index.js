@@ -3,7 +3,7 @@ var count = require('./lib/count.js');
 var permute = require('./lib/permute.js');
 
 var morph = function(words, output) {
-	if(typeof words != 'array') {
+	if(typeof words === 'string') {
 		words = words.split(' ');
 	}
 
